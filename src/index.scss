@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    background-color: #17beac;
+  }
+}
