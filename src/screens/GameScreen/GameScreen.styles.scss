@@ -1,3 +1,7 @@
+$turquoiseLight:  #17beac;
+
+
+
 .game__wrapper {
   width: 100%;
   height: 100%;
@@ -15,7 +19,7 @@
   width: 50%;
   height: 70vh;
   position: relative;
-  background-color: #17beac;
+  background-color: $turquoiseLight;
   img {
     transform: translateY(35%);
     height: 250px;

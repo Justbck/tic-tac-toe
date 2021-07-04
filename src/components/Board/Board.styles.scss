@@ -1,9 +1,14 @@
+$turquoise:  #17beac;
+$turquoiseDarker:  #0ba293;
+$white: #f0f0f0;
+$grey: #272727;
+
 .board__wrapper {
   width: 50%;
   margin: 0 auto;
   height: 70vh;
   position: relative;
-  background-color: #17beac;
+  background-color: $turquoise;
 }
 
 .board {
@@ -21,17 +26,14 @@
   margin: 30px auto;
 }
 
-//#f6ebcb beige
-//#515353 gray
-
 .square {
   margin: 0;
   padding: 0;
   border-top: none;
   border-left: none;
-  border-bottom: 10px solid #0ba293;
-  border-right: 10px solid #0ba293;
-  background-color: #17beac;
+  border-bottom: 10px solid $turquoiseDarker;
+  border-right: 10px solid $turquoiseDarker;
+  background-color: $turquoise;
   width: 120px;
   height: 120px;
   transition: ease-in 0.2s;
@@ -39,7 +41,7 @@
   &:hover {
     cursor: pointer;
     -webkit-box-shadow: 0 0 1px 3px #ffffff9f inset;
-    -moz-box-shadow: 0 0 1px 3px#d6d6d62f inset;
+    -moz-box-shadow: 0 0 1px 3px #d6d6d62f inset;
     box-shadow: 0 0 1px 3px #e3e6e56e inset;
   }
 
@@ -77,16 +79,16 @@
   padding: 5px 20px;
   margin: 5px auto;
   transition: ease-in 0.2s;
-  background-color: #272727;
-  border-bottom: 2px solid #272727;
-  color: #f0f0f0;
+  background-color: $grey;
+  border-bottom: 2px solid $grey;
+  color: $white;
   width: 200px;
   text-align: center;
 
   &:hover {
-    background-color: #f0f0f0;
-    border-bottom: 2px solid #17beac;
-    color: #272727;
+    background-color: $white;
+    border-bottom: 2px solid $turquoiseDarker;
+    color: $grey;
     cursor: pointer;
   }
 }

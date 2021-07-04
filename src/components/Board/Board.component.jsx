@@ -23,7 +23,7 @@ function Board({ squares, onClick, winner, mode, turn, showSquares}) {
     }
     
     return (
-        <>
+        <div>
         <div className = "board__turn">
         {mode === false  ? 
         <div> {turn === 'X' &&  !winner ? 'X Turn' : 'O Turn'}</div>
@@ -48,7 +48,7 @@ function Board({ squares, onClick, winner, mode, turn, showSquares}) {
                         </div>
                 </div>
             }
-        </>
+        </div>
     )
 }
 
