@@ -102,9 +102,9 @@ function GameScreen() {
     
     return (
         <div className = 'game__wrapper'>
-        <div className = 'game__audio' onClick = {toggle}>
+        {/*<div className = 'game__audio' onClick = {toggle}>
             {playing ? <GiSoundOn/> : <GiSoundOff/>}
-        </div>
+        </div>*/}
             {
                 mode === null ? 
                     <HomeScreen 
@@ -147,7 +147,7 @@ function GameScreen() {
                                     
                                   
             }
-        
+        {/*<div>{renderSound()}</div>*/}
         </div>
     )
 }

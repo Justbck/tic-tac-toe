@@ -13,7 +13,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height: 80vh;
+  height: 70vh;
   position: relative;
   background-color: #17beac;
   img {
@@ -39,4 +39,60 @@
 
 .board__buttons {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 440px) {
+  //380 = 100%
+  //120 = 0.33 * 380
+  //100 = 0.39
+
+  //240 = 100%
+  //80
+  //70
+
+  .board__buttons {
+    justify-content: center;
+    width: 180px;
+  }
+  .board__button {
+    width: 80px;
+  }
+
+  .board {
+    width: 240px;
+    height: 240px;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+    img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .image__wrapper {
+    img {
+      transform: translateY(70%);
+      height: 200px;
+      width: 200px;
+    }
+    h3 {
+      transform: translateY(300%);
+    }
+  }
+
+  .image__wrapper__draw {
+    img {
+      transform: translateY(200%);
+      height: 80px;
+      width: 80px;
+    }
+    h3 {
+      transform: translateY(500%);
+    }
+  }
 }
