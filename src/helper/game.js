@@ -62,6 +62,13 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+//best score (best move) is randomized, but also calculated
+//to mimic real player behaviour
+//eg. if player has left X in one square, the other one is more likely
+//to place O in the square that will block player X from crossing the win path,
+//and also more likely to place O to achive win path before opponent
+
 function minMax(board,depth,is_max,ai,hn,alpha=-Infinity,beta=Infinity)
 {
     let winner = checkWinner(board);

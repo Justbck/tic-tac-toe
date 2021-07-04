@@ -35,6 +35,8 @@ function GameScreen() {
     }, [square]);
 
 
+
+
     useEffect(() => {
         if(winner==='X')
         {
@@ -140,9 +142,8 @@ function GameScreen() {
                         
                         <div className = 'board__buttons'>
                                 <button className = 'board__button' onClick={playAgain}>Play Again</button>
-                                <ExitButton clikExit={clikExit} className = {'board__button'}/>
-                               
-                            </div>
+                                <ExitButton clikExit={clikExit} className = {'board__button'}/>                            
+                        </div>
                         </div>
                                     
                                   
