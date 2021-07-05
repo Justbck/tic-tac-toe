@@ -24,10 +24,8 @@ function Score ({ winner, showScore}) {
     return (
         <div>
             {showScore &&
-                <div className = 'board__wrapper'>
-                <div className = 'board'>
+                <div>
                         {renderScore()}
-                        </div>
                 </div>
             }
         </div>

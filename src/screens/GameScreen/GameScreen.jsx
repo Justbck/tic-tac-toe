@@ -6,15 +6,12 @@ import './GameScreen.styles.scss'
 import ExitButton from '../../components/Button/ExitButton.component';
 import circle from '../../images/circle.png';
 import cross from '../../images/cross.png';
-import useSound from '../../helper/useSound';
-import {GiSoundOn} from 'react-icons/gi'
-import {GiSoundOff} from 'react-icons/gi'
 import Audio from '../../components/audio/audio'
 import win from '../../sounds/win.wav';
+import useSound from 'use-sound';
 
 
 function GameScreen() {
-    const [playing, toggle] = useSound(null);
     const [square, setSquare] = useState(Array(9).fill(null));
     const [mode, setMode] = useState(null)
     const [turn, setTurn] = useState(null)
@@ -23,6 +20,14 @@ function GameScreen() {
     const [oScore, setOScore] = useState(0)
     const [winner, setWinner] = useState(null)
     const [showSquares, setShowSquares] = useState(true)
+
+    const soundUrl = '../../sounds/click.mp3'
+
+    const [playbackRate, setPlaybackRate] = React.useState(0.75);
+  
+    const [play] = useSound(soundUrl, {
+      volume: 1,
+    });
 
 
     useEffect(() => {
@@ -54,6 +59,7 @@ function GameScreen() {
         if (squares[i] || winner) {
             return;
         }
+        play();
         squares[i] = turn === 'X' ? cross : circle
         setSquare(squares) 
         changeTurn()
